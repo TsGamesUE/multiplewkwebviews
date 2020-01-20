@@ -19,6 +19,7 @@ class viewHome: UIViewController, WKUIDelegate, WKNavigationDelegate {
     
      override func loadView() {
            let webConfiguration = WKWebViewConfiguration()
+         webConfiguration.processPool = viewHome.processPool
            webViewHome = WKWebView(frame: .zero, configuration: webConfiguration)
            webViewHome.uiDelegate = self
            webViewHome.configuration.preferences.javaScriptEnabled = true
