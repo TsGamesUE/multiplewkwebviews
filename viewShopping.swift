@@ -19,6 +19,7 @@ class viewShopping: UIViewController, WKUIDelegate, WKNavigationDelegate {
     
      override func loadView() {
            let webConfiguration = WKWebViewConfiguration()
+         webConfiguration.processPool = viewHome.processPool
            webViewShopping = WKWebView(frame: .zero, configuration: webConfiguration)
            webViewShopping.uiDelegate = self
            //webViewShopping.configuration.preferences.javaEnabled = true
